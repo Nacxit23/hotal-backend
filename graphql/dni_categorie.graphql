@@ -1,0 +1,9 @@
+type Dni_categorie @model {
+    id: ID! @globalId
+    nameDni: String!
+    dataDni: String!
+}
+
+type Query {
+    dni_categories: [Dni_categorie!] @field(resolver: App//GraphQl//Queries//DniCategorie//query@resolve)
+}
