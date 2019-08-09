@@ -1,6 +1,6 @@
 <?php
 
-use App\Model\Dni_categorie;
+use App\Models\DniCategorie;
 use Illuminate\Database\Seeder;
 
 class dniCategorieSedder extends Seeder
@@ -12,6 +12,6 @@ class dniCategorieSedder extends Seeder
      */
     public function run()
     {
-        factory(Dni_categorie::class, 20)->create();
+        factory(DniCategorie::class, 20)->create();
     }
 }

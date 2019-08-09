@@ -13,7 +13,7 @@ class CreateCreditCardsTable extends Migration
      */
     public function up()
     {
-        Schema::create('credit_cards', function (Blueprint $table) {
+        Schema::create('creditCards', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title_name');
             $table->date('expiration_date');

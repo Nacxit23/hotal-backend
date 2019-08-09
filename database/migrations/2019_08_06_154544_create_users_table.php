@@ -20,10 +20,10 @@ class CreateUsersTable extends Migration
             $table->integer('year_old');
             $table->string('nationality');
             $table->string('gender');
-            $table->unsignedInteger('id_dni_category')->nullable();
-            $table->foreign('id_dni_category')->references('id')->on('dni_categories')->onDelete('cascade');
-            $table->unsignedInteger('id_creditCards');
-            $table->foreign('id_creditCards')->references('id')->on('credit_cards')->onDelete('cascade');
+            $table->unsignedInteger('dni_category_id')->nullable();
+            $table->foreign('dni_category_id')->references('id')->on('dniCategories')->onDelete('cascade');
+            $table->unsignedInteger('creditCards_id');
+            $table->foreign('creditCards_id')->references('id')->on('creditCards')->onDelete('cascade');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('name')->virtualAs('CONCAT(first_name, " ", last_name)');

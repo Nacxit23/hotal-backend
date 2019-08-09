@@ -4,8 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Reservation
+ * @package App\Models
+ */
 class Reservation extends Model
 {
+    /**
+     * @var string
+     */
+    protected $table = 'reservations';
+
     /**
      * @var array
      */
@@ -39,6 +48,6 @@ class Reservation extends Model
      */
     public function checkDetails()
     {
-        return $this->hasMany(Check_detail::class);
+        return $this->hasMany(CheckDetail::class);
     }
 }

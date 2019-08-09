@@ -1,12 +1,12 @@
 <?php
 
-namespace App\GraphQL\Queries\DniCategorie;
+namespace App\GraphQL\Queries;
 
-use App\Model\Dni_categorie;
+use App\Models\DniCategorie;
 use GraphQL\Type\Definition\ResolveInfo;
 use Nuwave\Lighthouse\Support\Contracts\GraphQLContext;
 
-class query
+class DniCategorieQuery
 {
     /**
      * Return a value for the field.
@@ -19,6 +19,7 @@ class query
      */
     public function resolve($rootValue, array $args, GraphQLContext $context, ResolveInfo $resolveInfo)
     {
-        Dni_categorie::all();
+        // TODO implement the resolver
+        return DniCategorie::all();
     }
 }

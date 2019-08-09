@@ -19,9 +19,9 @@ class CreateRoomsTable extends Migration
             $table->string('location')->nullable();
             $table->integer('nightPrice');
             $table->boolean('status')->default(true);
-            $table->unsignedInteger('id_roomCategories');
-            $table->foreign('id_roomCategories')->references('id')
-                ->on('room_categories')->onDelete('cascade');
+            $table->unsignedInteger('roomCategories_id');
+            $table->foreign('roomCategories_id')->references('id')
+                ->on('roomCategories')->onDelete('cascade');
             $table->timestamps();
         });
     }

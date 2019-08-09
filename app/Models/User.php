@@ -5,9 +5,18 @@ namespace App\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+/**
+ * Class User
+ * @package App\Models
+ */
 class User extends Authenticatable
 {
     use Notifiable;
+
+    /**
+     * @var string
+     */
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
@@ -51,15 +60,16 @@ class User extends Authenticatable
      */
     public function dniCategorie()
     {
-        return $this->belongsTo(Dni_categorie::class);
+        return $this->belongsTo(DniCategorie::class);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+
     public function creditCard()
     {
-        return $this->belongsTo(Credit_card::class);
+        return $this->belongsTo(CreditCard::class);
     }
 
     /**

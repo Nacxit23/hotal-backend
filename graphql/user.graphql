@@ -1,0 +1,9 @@
+type User @model {
+    id: ID! @globalId
+    firstName: String! @rename(attribute: "first_name")
+    lastName: String! @rename(attribute: "last_name")
+    yearOld: Int! @rename(attribute: "year_old")
+    nationality: String!
+    gender: String!
+    dniCategorie: DniCategorie! @belongsTo
+}

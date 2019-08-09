@@ -4,15 +4,25 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Dni_categorie extends Model
+/**
+ * Class Credit_card
+ * @package App\Models
+ */
+class CreditCard extends Model
 {
+    /**
+     * @var string
+     */
+    protected $table = 'creditCards';
+
     /**
      * @var array
      */
     protected $fillable = [
-        'nameDni',
-        'dataDni',
-        'status',
+        'title_name',
+        'expiration_date',
+        'creditCards_number',
+        'segurity_number',
     ];
 
     /**

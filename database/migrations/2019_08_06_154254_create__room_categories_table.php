@@ -13,7 +13,7 @@ class CreateRoomCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('room_categories', function (Blueprint $table) {
+        Schema::create('roomCategories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nameCategories');
             $table->string('descripcion');

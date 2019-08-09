@@ -1,6 +1,6 @@
 <?php
 
-use App\Model\User;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
@@ -18,8 +18,8 @@ class UserSeeder extends Seeder
             'year_old' => 25,
             'nationality' => "Nicaragua",
             'gender' => 'Masculino',
-            'id_dni_category' => 2,
-            'id_creditCards' => 2,
+            'dni_category_id' => 2,
+            'creditCards_id' => 2,
             'email' => "tierrasalvaje_02@hotmail.com",
             'password' => bcrypt("barselona123"),
         ]);

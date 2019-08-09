@@ -13,7 +13,7 @@ class CreateDniCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('dni_categories', function (Blueprint $table) {
+        Schema::create('dniCategories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nameDni')->unique();
             $table->string('dataDni')->unique();

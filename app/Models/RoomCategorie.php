@@ -4,8 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Room_categorie extends Model
+/**
+ * Class Room_categorie
+ * @package App\Models
+ */
+class RoomCategorie extends Model
 {
+    /**
+     * @var string
+     */
+    protected $table = 'roomCategories';
+
     /**
      * @var array
      */

@@ -1,6 +1,6 @@
 <?php
 
-use App\Model\Credit_card;
+use App\Models\CreditCard;
 use Illuminate\Database\Seeder;
 
 class creditCardSedder extends Seeder
@@ -12,6 +12,6 @@ class creditCardSedder extends Seeder
      */
     public function run()
     {
-        factory(Credit_card::class, 20)->create();
+        factory(CreditCard::class, 20)->create();
     }
 }

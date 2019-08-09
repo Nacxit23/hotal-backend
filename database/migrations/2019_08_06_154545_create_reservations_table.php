@@ -19,11 +19,11 @@ class CreateReservationsTable extends Migration
             $table->dateTime('check_out')->nullable();
             $table->dateTime('reservation_date');
             $table->boolean('status')->default(true);
-            $table->unsignedInteger('id_users');
-            $table->foreign('id_users')->references('id')
+            $table->unsignedInteger('users_id');
+            $table->foreign('users_id')->references('id')
                 ->on('users')->onDelete('cascade');
-            $table->unsignedInteger('id_rooms');
-            $table->foreign('id_rooms')->references('id')
+            $table->unsignedInteger('rooms_id');
+            $table->foreign('rooms_id')->references('id')
                 ->on('rooms')->onDelete('cascade');
             $table->timestamps();
         });

@@ -13,10 +13,10 @@ class CreateCheckDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('check_details', function (Blueprint $table) {
+        Schema::create('checkDetails', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('id_reservations');
-            $table->foreign('id_reservations')->references('id')->on('reservations')->onDelete('cascade');
+            $table->unsignedInteger('reservations_id');
+            $table->foreign('reservations_id')->references('id')->on('reservations')->onDelete('cascade');
             $table->integer('total');
             $table->integer('tax');
             $table->timestamps();

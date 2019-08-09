@@ -4,7 +4,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Model\Credit_card::class, function (Faker $faker) {
+$factory->define(App\Models\CreditCard::class, function (Faker $faker) {
     return [
         'title_name' => $faker->creditCardNumber,
         'expiration_date' => $faker->date,

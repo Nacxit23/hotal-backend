@@ -1,9 +1,10 @@
-type Dni_categorie @model {
+type DniCategorie @model {
     id: ID! @globalId
     nameDni: String!
     dataDni: String!
+    dniCategories: [DniCategorie!]! @hasMany(type:"connection")
 }
 
-type Query {
-    dni_categories: [Dni_categorie!] @field(resolver: App//GraphQl//Queries//DniCategorie//query@resolve)
+extend type Query {
+    dniCategories: [DniCategorie!]! @field(resolver: "App\\GraphQL\\Queries\\DniCategorieQuery@resolve")
 }
