@@ -3,4 +3,6 @@ type Room @model @model {
     description: String
     location: String!
     nightPrice: Int!
+    roomCategorie: RoomCategorie! @belongTo
+    reservations: [Reservation!]! @hasMany(type: "connection")
 }

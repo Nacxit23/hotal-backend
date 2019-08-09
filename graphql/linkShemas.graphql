@@ -1,0 +1,4 @@
+#import dni_categorie.graphql
+#import user.graphql
+#import creditCard.graphql
+#import reservation.graphql

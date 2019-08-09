@@ -23,8 +23,8 @@ class Reservation extends Model
         'check_out',
         'reservation_date',
         'status',
-        'id_users',
-        'id_rooms',
+        'users_id',
+        'rooms_id',
     ];
 
     /**

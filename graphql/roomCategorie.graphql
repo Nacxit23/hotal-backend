@@ -2,4 +2,5 @@ type RoomCategorie @model{
     id: ID! @globalId
     nameCategories: String!
     descripcion: String
+    rooms: [Room!]! @hasMany(type: "connection")
 }

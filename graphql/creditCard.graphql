@@ -4,4 +4,5 @@ type CreditCard @model {
     expirationDate: Date! @rename(attribute: "expiration_date")
     creditCardNumber: String! @rename(attribute: "creditCards_number")
     segurityNumber: String! @rename(attribute: "segurity_number")
+    users: [User!]! @hasMany(type: "connection")
 }

@@ -19,7 +19,7 @@ class CheckDetail extends Model
      * @var array
      */
     protected $fillable = [
-        'id_reservations',
+        'reservations_id',
         'total',
         'tax',
     ];

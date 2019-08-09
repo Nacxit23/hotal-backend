@@ -22,7 +22,7 @@ class Room extends Model
         'location',
         'nightPrice',
         'status',
-        'id_roomCategories',
+        'roomCategories_id',
     ];
 
     /**

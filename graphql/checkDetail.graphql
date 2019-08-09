@@ -2,4 +2,5 @@ type CheckDetail @model {
     id: ID! @globalId
     total: Int!
     tax: Int!
+    reservation: [Reservation!]! @hasMany(type:"connection")
 }
