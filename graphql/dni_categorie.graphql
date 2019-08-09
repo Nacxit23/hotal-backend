@@ -2,7 +2,7 @@ type DniCategorie @model {
     id: ID! @globalId
     nameDni: String!
     dataDni: String!
-    dniCategories: [DniCategorie!]! @hasMany(type:"connection")
+    users: [User!]! @hasMany(type:"connection")
 }
 
 extend type Query {

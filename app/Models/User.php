@@ -33,8 +33,8 @@ class User extends Authenticatable
         'nationality',
         'gender',
         'name',
-        'id_dni_category',
-        'id_creditCards',
+        'dni_category_id',
+        'creditCard_id',
     ];
 
     /**
@@ -69,7 +69,7 @@ class User extends Authenticatable
 
     public function creditCard()
     {
-        return $this->belongsTo(CreditCard::class);
+        return $this->belongsTo(CreditCard::class,"creditCard_id");
     }
 
     /**

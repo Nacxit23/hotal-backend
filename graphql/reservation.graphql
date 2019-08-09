@@ -1,0 +1,6 @@
+type Reservation @model {
+    id: ID! @globalId
+    checkIn: DateTime! @rename(attribute: "check_in")
+    checkOut: DateTime @rename(attribute: "check_out")
+    reservationDate: DateTime @rename(attribute: "reservation_date")
+}

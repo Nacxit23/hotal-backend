@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'nationality' => "Nicaragua",
             'gender' => 'Masculino',
             'dni_category_id' => 2,
-            'creditCards_id' => 2,
+            'creditCard_id' => 2,
             'email' => "tierrasalvaje_02@hotmail.com",
             'password' => bcrypt("barselona123"),
         ]);

@@ -1,0 +1,7 @@
+type CreditCard @model {
+    id: ID! @globalId
+    titleName: String! @rename(attribute: "title_name")
+    expirationDate: Date! @rename(attribute: "expiration_date")
+    creditCardNumber: String! @rename(attribute: "creditCards_number")
+    segurityNumber: String! @rename(attribute: "segurity_number")
+}

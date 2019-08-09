@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('gender');
             $table->unsignedInteger('dni_category_id')->nullable();
             $table->foreign('dni_category_id')->references('id')->on('dniCategories')->onDelete('cascade');
-            $table->unsignedInteger('creditCards_id');
-            $table->foreign('creditCards_id')->references('id')->on('creditCards')->onDelete('cascade');
+            $table->unsignedInteger('creditCard_id');
+            $table->foreign('creditCard_id')->references('id')->on('creditCards')->onDelete('cascade');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('name')->virtualAs('CONCAT(first_name, " ", last_name)');

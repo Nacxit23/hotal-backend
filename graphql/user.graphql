@@ -5,5 +5,11 @@ type User @model {
     yearOld: Int! @rename(attribute: "year_old")
     nationality: String!
     gender: String!
+    creditCard: CreditCard! @belongsTo
     dniCategorie: DniCategorie! @belongsTo
+    reservations: [Reservation!]! @hasMany(typr: "Connection")
+}
+
+extend type Query {
+    users: [User!]! @field(resolver: "App\\GraphQL\\Queries\\UserQuery@resolve")
 }

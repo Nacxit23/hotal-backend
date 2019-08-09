@@ -1,0 +1,5 @@
+type RoomCategorie @model{
+    id: ID! @globalId
+    nameCategories: String!
+    descripcion: String
+}

@@ -1,0 +1,6 @@
+type Room @model @model {
+    id: ID! @globalId
+    description: String
+    location: String!
+    nightPrice: Int!
+}
