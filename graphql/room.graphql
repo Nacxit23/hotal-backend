@@ -3,6 +3,10 @@ type Room @model @model {
     description: String
     location: String!
     nightPrice: Int!
-    roomCategorie: RoomCategorie! @belongTo
+    roomCategorie: RoomCategorie! @belongsTo
     reservations: [Reservation!]! @hasMany(type: "connection")
+}
+
+extend type Query {
+    rooms: [Room!]! @field(resolver: "App\\GraphQL\\Queries\\RoomQuery@resolve")
 }

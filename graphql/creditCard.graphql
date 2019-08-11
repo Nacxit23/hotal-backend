@@ -6,3 +6,7 @@ type CreditCard @model {
     segurityNumber: String! @rename(attribute: "segurity_number")
     users: [User!]! @hasMany(type: "connection")
 }
+
+extend type Query {
+    creditCards: [CreditCard!]! @field(resolver: "App\\GraphQL\\Queries\\CreditCardQuery@resolve")
+}

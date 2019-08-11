@@ -4,6 +4,10 @@ type Reservation @model {
     checkOut: DateTime @rename(attribute: "check_out")
     reservationDate: DateTime @rename(attribute: "reservation_date")
     user: User! @belongsTo
-    checkDetails: [checkDetails!]! @hasMany(type:"connection")
+    checkDetails: [CheckDetail!]! @hasMany(type:"connection")
     room: Room! @belongsTo
+}
+
+extend type Query {
+    reservations: [Reservation!]! @field(resolver: "App\\GraphQL\\Queries\\ReservationQuery@resolve")
 }

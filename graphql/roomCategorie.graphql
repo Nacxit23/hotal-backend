@@ -4,3 +4,7 @@ type RoomCategorie @model{
     descripcion: String
     rooms: [Room!]! @hasMany(type: "connection")
 }
+
+extend type Query {
+    roomCategories: [RoomCategorie!]! @field(resolver: "App\\GraphQL\\Queries\\RoomCategorieQuery@resolve")
+}

@@ -4,3 +4,7 @@ type CheckDetail @model {
     tax: Int!
     reservation: [Reservation!]! @hasMany(type:"connection")
 }
+
+extend type Query {
+    checkDetails: [CheckDetail!]! @field(resolver: "App\\GraphQL\\Queries\\CheckDetailQuery@resolve")
+}
